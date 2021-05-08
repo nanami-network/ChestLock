@@ -1,0 +1,32 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
+plugins {
+    id 'java'
+}
+
+group = 'xyz.n7mn.dev'
+version = '1.0'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+
+    maven {
+        name = 'purpur'
+        url = 'https://repo.pl3x.net/'
+    }
+}
+
+dependencies {
+    compileOnly 'net.pl3x.purpur:purpur-api:1.16.5-R0.1-SNAPSHOT'
+
+    compile 'mysql:mysql-connector-java:8.0.24'
+}
+
+processResources {
+    from(sourceSets.main.resources.srcDirs) {
+        filter ReplaceTokens, tokens: [version: version]
+    }
+}

@@ -1,0 +1,13 @@
+name: ChestLock
+version: @version@
+main: xyz.n7mn.dev.chestlock.ChestLock
+api-version: 1.16
+authors: [ 7mi_chan ]
+description: ChestLock
+commands:
+  lock:
+    description: 'チェスト保護'
+    usage: '/lock'
+  unlock:
+    description: 'チェスト保護解除'
+    usage: '/unlock'

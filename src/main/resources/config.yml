@@ -1,0 +1,6 @@
+MySQLServer: ''
+MySQLPort: 3306
+MySQLDatabase: ''
+MySQLUsername: ''
+MySQLPassword: ''
+MySQLOption: ''
